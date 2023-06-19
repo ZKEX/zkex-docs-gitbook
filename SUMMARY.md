@@ -1,10 +1,10 @@
 # Table of contents
 
-* [👋 Welcome to A Product](README.md)
-
 ## Overview
 
-* [💡 What we do](overview/what-we-do.md)
+* 💡 What we do
+  * [A]()
+  * [B]()
 * [✨ Our Features](overview/our-features.md)
 
 ## Product Guides
