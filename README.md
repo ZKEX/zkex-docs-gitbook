@@ -1,7 +1,3 @@
----
-description: FeeThere is no charge or fee to activate your L2 account on ZKEX.
----
-
 # ❓ What is ZKEX?
 
 Offering bridgeless multi-chain trading secured with zero-knowledge, ZKEX is a trustless and self-custodial order book DEX with CeFi performance.
