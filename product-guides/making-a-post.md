@@ -110,6 +110,8 @@ After a couple of seconds the trade is executed and you'll see your balance upda
 
 <figure><img src="https://github.com/ZKEX/docs/raw/master/static/img/get-started/21.png" alt="" width="375"><figcaption></figcaption></figure>
 
+##
+
 ## Next steps
 
 You're setup now! Go ahead and try different Buy and Sell orders.
