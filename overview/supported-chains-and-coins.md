@@ -2,7 +2,7 @@
 description: SFeeThere is no charge or fee to activate your L2 account on ZKEX.
 ---
 
-# 🪙 Supported chains and coins
+# ✨ Supported chains and coins
 
 ## Networks
 
