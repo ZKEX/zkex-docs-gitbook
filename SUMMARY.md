@@ -2,11 +2,13 @@
 
 ## Overview
 
-* [💰 Fees](README.md)
-* [✨ Our Features](overview/our-features.md)
-* [💰 Copy of Fee](overview/copy-of-fee.md)
-* [💰 Copy of Fee](overview/copy-of-fee-1.md)
-*
+* [❓ What is ZKEX?](README.md)
+* [💰 Fees](<README (1).md>)
+* [🌐 How ZKEX works](overview/our-features.md)
+* [👝 L2 ZKEX Wallet](overview/l2-zkex-wallet.md)
+* [📔 Resources](overview/resources.md)
+* [🔐 Security](overview/security.md)
+* [🪙 Supported chains and coins](overview/supported-chains-and-coins.md)
 
 ## Product Guides
 
