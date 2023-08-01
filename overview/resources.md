@@ -10,9 +10,13 @@ If you see anything broken or incorrect, you can report the bug to us: [https://
 
 Complete quests and collect points to earn future rewards: [https://zkex.crew3.xyz/](https://zkex.crew3.xyz/)
 
+##
+
 ## Branding
 
 A download with our logo and branding guidelines will be available soon.
+
+##
 
 ## Lite Paper
 

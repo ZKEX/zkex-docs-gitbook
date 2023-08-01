@@ -2,21 +2,25 @@
 
 Offering bridgeless multi-chain trading secured with zero-knowledge, ZKEX is a trustless and self-custodial order book DEX with CeFi performance.
 
-**Users will be able to trade assets across multiple chains with a similar experience as on Binance or Coinbase, but instead, ZKEX will be decentralized, trust minimized, and non-custodial, with transactions secured with zero-knowledge proofs.**
+Users will be able to trade assets across multiple chains with a similar experience as on Binance or Coinbase, but instead, ZKEX will be decentralized, trust minimized, and non-custodial, with transactions secured with zero-knowledge proofs.
 
-\*\* ZKEX is built upon three pioneering zero-knowledge rollups: zkLink, Starkware, and zkSync.\*\*
+ZKEX is built upon three pioneering zero-knowledge rollups: zkLink, Starkware, and zkSync.
 
 {% hint style="info" %}
 Note: ZKEX is currently in public testnet phase. These Docs give a conceptual overview of the platform, and will be updated on a regular basis.
 {% endhint %}
 
-**We only have the following official channels:**
+
+
+We only have the following official channels:
 
 * Website: [https://zkex.com](https://zkex.com/)
 * Twitter: [https://twitter.com/ZKEX\_Official](https://twitter.com/ZKEX\_Official)
 * Discord: [https://discord.gg/ctDAYrrNTH](https://discord.gg/ctDAYrrNTH)
 * Blog: [https://zkex.medium.com](https://zkex.medium.com/)
 * Crew3 Community: [https://zkex.crew3.xyz/](https://zkex.crew3.xyz/)
+
+##
 
 ## Why use ZKEX instead of another DEX?
 
@@ -39,6 +43,8 @@ Crypto traders on other DEXs often encounter volatile liquidity, high slippage c
 >
 > * Isolated blockchains: If someone has USDC on the ETH-20 network, but would like to trade on another chain, they can’t make the trade directly. Instead they would need to bridge their funds over using a separate service, which can be tedious, subject to extra fees, and potentially unsafe.
 > * Fewer trading strategies: Limit orders are often missing from most DEXs, which prevents automated trading.
+
+##
 
 ## Core Concepts
 

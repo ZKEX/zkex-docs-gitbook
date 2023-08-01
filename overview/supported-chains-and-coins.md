@@ -21,6 +21,8 @@ We've successfully integrated the following blockchain networks, with more comin
 > * StarkNet (under development)
 > * zkSync (under development)
 
+##
+
 ## Stablecoins
 
 Stablecoins are a cryptocurrency pegged to a target value such as the US Dollar at a 1:1 ratio.

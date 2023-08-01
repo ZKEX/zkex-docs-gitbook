@@ -6,6 +6,8 @@ ZKEX will feel very much like Binance, but will be decentralized, trust minimize
 Users can use their Metamask wallet to deposit/withdraw funds to ZKEX. Both spot trading and derivatives trading will be available.
 {% endhint %}
 
+##
+
 ## Basic trading
 
 Users will be able to deposit assets from any connected L1 chain or L2 into their ZKEX account and start trading. They can withdraw the assets back anytime, with the re-assurance that every transaction was verified with zero-knowledge proofs.
@@ -17,6 +19,8 @@ Users will be able to deposit assets from any connected L1 chain or L2 into thei
 * He decides to leave 5 ETH in his L2 wallet to trade with later, and withdraw 6 ETH back to his Metamask wallet. He pays gas fees + withdrawal fee since he is moving some assets from L2 > L1.
 
 Note: Users only pay gas fees whenever they deposit or withdraw funds between L1 and L2. There are no fees for keeping your assets in your own L2 wallet, which are always in your custody.
+
+
 
 
 
@@ -35,6 +39,8 @@ Note: Users only pay gas fees whenever they deposit or withdraw funds between L1
 \*Note there are still gas fees when depositing or withdrawing funds between L1 and L2.
 
 To summarize, ZKEX is an order book exchange designed for both new and professional DeFi traders, with a seamless user experience, that is ultra-secure, capital efficient, multi-chain, decentralized, with competitive fees and access to massive liquidity from all supported blockchains.
+
+
 
 
 

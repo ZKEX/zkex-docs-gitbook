@@ -16,11 +16,15 @@ When you connect your browser wallet to ZKEX and 'deposit' funds into ZKEX for t
 
 This ensures you retain custody in your own wallet, and there are no assets on ZKEX to attack.
 
+##
+
 ## Deposits
 
 Moving your assets to trade on ZKEX is safe and secure, as no bridges are involved.
 
 Instead, an L2 network is built natively on top of each connected blockchain, which makes it quick and easy to 'move' assets into ZKEX to trade from your browser wallet.
+
+##
 
 ## Transactions
 
@@ -46,11 +50,15 @@ ZKEX applies a two-step security guarantee of verification + judgment.
 >
 > This additional check by an independent third-party gives peace of mind and guarantees consistency, while keeping the details of the trade completely private.
 
+##
+
 ## Disaster recovery
 
 ZKEX allows an emergency withdrawal function - giving users the ability to unlock their assets in case of an extreme situation.
 
 Details of how to do this will be released soon on the [**L2Wallet**](https://github.com/ZKEX/docs/blob/master/docs/Concepts/L2Wallet) page.
+
+##
 
 ## Technical details
 
@@ -60,15 +68,21 @@ For more technical information about our security stack, please see:
 * [https://docs.zksync.io/userdocs/security/](https://docs.zksync.io/userdocs/security/)
 * [https://layerzero.network/pdf/LayerZero\_Whitepaper\_Release.pdf](https://layerzero.network/pdf/LayerZero\_Whitepaper\_Release.pdf)
 
+##
+
 ## Security audits
 
 A security audit is currently under way and will be published on our website.
 
 In future, a security review will be conducted before every update.
 
+##
+
 ## Bug Bounty Program
 
 After launch, we will offer a bug bounty program, with generous rewards to participants.
+
+##
 
 ## Decentralization
 
