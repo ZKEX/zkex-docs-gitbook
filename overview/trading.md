@@ -1,7 +1,3 @@
----
-description: SFeeThere is no charge or fee to activate your L2 account on ZKEX.
----
-
 # 📈 Trading
 
 ## Trading Types

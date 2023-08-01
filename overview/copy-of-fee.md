@@ -1,7 +1,3 @@
----
-description: FeeThere is no charge or fee to activate your L2 account on ZKEX.
----
-
 # 👝 L2 ZKEX Wallet
 
 {% hint style="info" %}
