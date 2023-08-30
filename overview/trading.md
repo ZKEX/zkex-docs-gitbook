@@ -10,6 +10,14 @@
 * Take Profit
 * Take Profit Limit
 
+
+
 ## Trading Pairs
 
 We plan to go live with a small number of pairs, with the potential of hundreds being eventually available.
+
+
+
+## Self Trade
+
+...
