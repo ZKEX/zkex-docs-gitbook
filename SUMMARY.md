@@ -12,6 +12,11 @@
 * [🪙 Tokenomics](overview/tokenomics.md)
 * [📔 Resources](overview/resources.md)
 
+## APIS
+
+* [📔 ZKEX 2.0 Market Maker API](product-guides/making-a-post.md)
+
+
 ## Product Guides
 
 * [📄 Get started on the ZKEX Testnet](product-guides/making-a-post.md)
