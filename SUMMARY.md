@@ -14,9 +14,9 @@
 
 ## APIS
 
-* [📔 ZKEX 2.0 Market Maker API](product-guides/making-a-post.md)
-
+* [📄 ZKEX 2.0 Market Maker API](apis/making-a-post/README.md)
+  * [Getting Started](apis/making-a-post/getting-started.md)
 
 ## Product Guides
 
-* [📄 Get started on the ZKEX Testnet](product-guides/making-a-post.md)
+*
