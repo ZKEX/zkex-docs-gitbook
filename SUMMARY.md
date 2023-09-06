@@ -20,7 +20,7 @@
 
 ## ZKEX2.0 MARKET MAKER APIS
 
-* [💫 Getting Started](zkex2.0-market-maker-apis/getting-started.md)
+* [💫 Getting Started](apis/making-a-post/getting-started.md)
 * [🤍 Websocket Subscribe & Unsubscribe](zkex2.0-market-maker-apis/websocket-subscribe-and-unsubscribe.md)
 * [📌 Websocket Data Push](zkex2.0-market-maker-apis/websocket-data-push.md)
 
