@@ -43,7 +43,7 @@
 * HTTP Header: `X-MBX-APIKEY` : `api key`
 *   Parameters:
 
-    <table><thead><tr><th width="154.21167883211677">Name</th><th>Type</th><th>Required</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1653983486</td><td>unix timestamp</td></tr></tbody></table>
+    <table><thead><tr><th width="154.21167883211677">Name</th><th width="106">Type</th><th>Required</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1653983486</td><td>unix timestamp</td></tr></tbody></table>
 *   Response :
 
     ```
@@ -59,7 +59,7 @@
 * HTTP Header: `X-MBX-APIKEY` : `api key`
 *   Parameters:
 
-    <table><thead><tr><th width="158.21167883211677">Name</th><th>Type</th><th>Required</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1653983486</td><td>unix timestamp</td></tr></tbody></table>
+    <table><thead><tr><th width="158.21167883211677">Name</th><th width="80">Type</th><th width="123">Required</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1653983486</td><td>unix timestamp</td></tr></tbody></table>
 *   Response :
 
     ```
@@ -84,7 +84,7 @@
 * HTTP Header: `X-MBX-APIKEY` : `api key`
 *   Parameters:
 
-    <table><thead><tr><th width="153.21167883211677">Name</th><th>Type</th><th>Required</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1653983486</td><td>unix timestamp</td></tr><tr><td>count</td><td>int</td><td>YES</td><td>1</td><td></td></tr></tbody></table>
+    <table><thead><tr><th width="153.21167883211677">Name</th><th width="93">Type</th><th width="117">Required</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1653983486</td><td>unix timestamp</td></tr><tr><td>count</td><td>int</td><td>YES</td><td>1</td><td></td></tr></tbody></table>
 *   Response :
 
     ```
@@ -111,7 +111,7 @@ Send in a new order.
 
 **Parameters:**
 
-<table><thead><tr><th width="166.21167883211677">Name</th><th width="112">Type</th><th width="113">Required</th><th width="159">Example</th><th>Description</th></tr></thead><tbody><tr><td>clientOid</td><td>string</td><td>NO</td><td>1234</td><td>The order id from client</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr><tr><td>side</td><td>string</td><td>YES</td><td>SELL</td><td>SELL/BUY</td></tr><tr><td>type</td><td>string</td><td>YES</td><td>LIMIT</td><td>only support LIMIT now</td></tr><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>timeInForce</td><td>string</td><td>YES</td><td>GTC</td><td>GTC/IOC/GTX/FOK</td></tr><tr><td>quantity</td><td>string</td><td>YES</td><td>20000000000000000000</td><td>decimals=18</td></tr><tr><td>price</td><td>string</td><td>YES</td><td>5000000000000000000</td><td>decimals=18</td></tr><tr><td>takerFeeRatio</td><td>int</td><td>YES</td><td>10</td><td>decimals=4</td></tr><tr><td>makerFeeRatio</td><td>int</td><td>YES</td><td>5</td><td>decimals=4</td></tr><tr><td>slot</td><td>int</td><td>YES</td><td>10</td><td></td></tr><tr><td>nonce</td><td>int</td><td>YES</td><td>310</td><td></td></tr><tr><td>userPubkey</td><td>string</td><td>YES</td><td>0dd4f603531bd78bbecd005d9e7cc62a794dcfadceffe03e269fbb6b72e9c724</td><td>zk-layer2 pubkey</td></tr><tr><td>orderSignature</td><td>string</td><td>YES</td><td>17039d98f87640c452ec4ab6bb91d2044a97ff516a920cd09bddacd774175a28d3836dc0d84c31cc862a1c1099f430adb3f7826bf97a086eba59b6ced3e4ef04</td><td>zk-layer2 signature for order</td></tr></tbody></table>
+<table><thead><tr><th width="166.21167883211677">Name</th><th width="97">Type</th><th width="99">Required</th><th width="159">Example</th><th>Description</th></tr></thead><tbody><tr><td>clientOid</td><td>string</td><td>NO</td><td>1234</td><td>The order id from client</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr><tr><td>side</td><td>string</td><td>YES</td><td>SELL</td><td>SELL/BUY</td></tr><tr><td>type</td><td>string</td><td>YES</td><td>LIMIT</td><td>only support LIMIT now</td></tr><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>timeInForce</td><td>string</td><td>YES</td><td>GTC</td><td>GTC/IOC/GTX/FOK</td></tr><tr><td>quantity</td><td>string</td><td>YES</td><td>20000000000000000000</td><td>decimals=18</td></tr><tr><td>price</td><td>string</td><td>YES</td><td>5000000000000000000</td><td>decimals=18</td></tr><tr><td>takerFeeRatio</td><td>int</td><td>YES</td><td>10</td><td>decimals=4</td></tr><tr><td>makerFeeRatio</td><td>int</td><td>YES</td><td>5</td><td>decimals=4</td></tr><tr><td>slot</td><td>int</td><td>YES</td><td>10</td><td></td></tr><tr><td>nonce</td><td>int</td><td>YES</td><td>310</td><td></td></tr><tr><td>userPubkey</td><td>string</td><td>YES</td><td>0dd4f603531bd78bbecd005d9e7cc62a794dcfadceffe03e269fbb6b72e9c724</td><td>zk-layer2 pubkey</td></tr><tr><td>orderSignature</td><td>string</td><td>YES</td><td>17039d98f87640c452ec4ab6bb91d2044a97ff516a920cd09bddacd774175a28d3836dc0d84c31cc862a1c1099f430adb3f7826bf97a086eba59b6ced3e4ef04</td><td>zk-layer2 signature for order</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Response" %}
@@ -151,7 +151,7 @@ Send in a new order.
 * HTTP Header: `X-MBX-APIKEY` : `api key`
 *   Parameters
 
-    <table><thead><tr><th width="153.21167883211677">Name</th><th>Type</th><th>Required</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr><tr><td>orderId</td><td>int</td><td>YES</td><td>755</td><td></td></tr></tbody></table>
+    <table><thead><tr><th width="130.21167883211677">Name</th><th width="97">Type</th><th width="116">Required</th><th width="148">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr><tr><td>orderId</td><td>int</td><td>YES</td><td>755</td><td></td></tr></tbody></table>
 * Response: none
 
 ***
@@ -163,7 +163,7 @@ Send in a new order.
 * HTTP HEADER: `X-MBX-APIKEY` : `api key`
 *   Parameters:
 
-    <table><thead><tr><th width="153.21167883211677">Name</th><th>Type</th><th>Required</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr></tbody></table>
+    <table><thead><tr><th width="150.21167883211677">Name</th><th width="105">Type</th><th width="114">Required</th><th width="144">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr></tbody></table>
 * Response : none
 
 ***
@@ -176,7 +176,7 @@ Send in a new order.
 * HTTP HEADER: `X-MBX-APIKEY` : `api key`
 *   Parameters:
 
-    <table><thead><tr><th width="143">Name</th><th width="95">Type</th><th width="120">Required</th><th width="116">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr><tr><td>status</td><td>string</td><td>NO</td><td>filled filled,partial</td><td>The order status (support combined status)</td></tr><tr><td>startTime</td><td>long</td><td>YES</td><td>1</td><td></td></tr><tr><td>endTime</td><td>long</td><td>YES</td><td>1654063467</td><td></td></tr><tr><td>limit</td><td>int</td><td>YES</td><td>20</td><td></td></tr></tbody></table>
+    <table><thead><tr><th width="137">Name</th><th width="87">Type</th><th width="102">Required</th><th width="139">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr><tr><td>status</td><td>string</td><td>NO</td><td>filled filled,partial</td><td>The order status (support combined status)</td></tr><tr><td>startTime</td><td>long</td><td>YES</td><td>1</td><td></td></tr><tr><td>endTime</td><td>long</td><td>YES</td><td>1654063467</td><td></td></tr><tr><td>limit</td><td>int</td><td>YES</td><td>20</td><td></td></tr></tbody></table>
 *   Response:
 
     ```
