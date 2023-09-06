@@ -12,10 +12,17 @@
 * [🪙 Tokenomics](overview/tokenomics.md)
 * [📔 Resources](overview/resources.md)
 
-## APIS
+## &#x20;NETWORK INFORMATION
 
-* [📄 ZKEX 2.0 Market Maker API](apis/making-a-post/README.md)
-  * [Getting Started](apis/making-a-post/getting-started.md)
+* [💸 Supported Tokens](network-information/supported-tokens.md)
+* [🛫 Mainnet Contract Address](network-information/mainnet-contract-address.md)
+* [🛬 Testnet Contract Address](network-information/testnet-contract-address.md)
+
+## ZKEX2.0 MARKET MAKER APIS
+
+* [💫 Getting Started](zkex2.0-market-maker-apis/getting-started.md)
+* [🤍 Websocket Subscribe & Unsubscribe](zkex2.0-market-maker-apis/websocket-subscribe-and-unsubscribe.md)
+* [📌 Websocket Data Push](zkex2.0-market-maker-apis/websocket-data-push.md)
 
 ## Product Guides
 
