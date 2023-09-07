@@ -22,79 +22,132 @@
 
 ### Get the server time of ZKEX
 
+{% tabs %}
+{% tab title="Request" %}
 * Http Method : `GET`
 * Http Path : `/mm/api/server`
 * Response :
+{% endtab %}
+
+{% tab title="Response" %}
+```
+{
+  "timeNow": 1650958799 
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ***
 
 ### Get all trading pairs supported by ZKEX
 
+{% tabs %}
+{% tab title="Request" %}
 * Http Method : `GET`
 * Http Path : `/mm/api/products`
-* Response :
+{% endtab %}
+
+{% tab title="Response" %}
+```
+[
+    {
+        "id": "XNY-USDT",
+        "baseCurrency": "XNY",
+        "quoteCurrency": "USDT",
+        "baseMinSize": "10000000000000",      //base asset minimal amount
+        "baseMaxSize": "10000000000000000000000000",    //unused
+        "quoteIncrement": "10000000000000000",      //quote asset minimal amount
+        "baseScale": -12,              //decimals
+        "quoteScale": -16,      //decimals
+        "l2symbolId": 2,                  // trading pair id on layer2
+        "l2baseCurrencyId": 3,          // currency id on layer2
+        "l2quoteCurrencyId": 4        // currency id on layer2
+    },
+    ......
+]   
+```
+{% endtab %}
+{% endtabs %}
 
 ***
 
 ### Get Market Maker's JWT-Token (use to subscribe Websocket)
 
+{% tabs %}
+{% tab title="Request" %}
 * HTTP Method: `GET`
 * HTTP Path: `/mm/api/users` (HMAC SHA256)
 * HTTP Header: `X-MBX-APIKEY` : `api key`
-*   Parameters:
 
-    <table><thead><tr><th width="154.21167883211677">Name</th><th width="106">Type</th><th>Required</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1653983486</td><td>unix timestamp</td></tr></tbody></table>
-*   Response :
+**Parameters:**
 
-    ```
-    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZGRyZXNzIjoiMHgzNDk4ZjQ1NjY0NTI3MGVlMDAzNDQxZGY4MmM3MThiNTZjMGU2NjY2IiwiZXhwaXJlZEF0IjoxNjU0MDU1MDMzLCJpZCI6NDksInB1YmtleSI6IjBkZDRmNjAzNTMxYmQ3OGJiZWNkMDA1ZDllN2NjNjJhNzk0ZGNmYWRjZWZmZTAzZTI2OWZiYjZiNzJlOWM3MjQifQ.2S1wt6KxfJU8kxvESbrdUW1jxYyqxXlcIhL9DwtW3Yc
-    ```
+<table><thead><tr><th width="154.21167883211677">Name</th><th width="106">Type</th><th width="108">Required</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1653983486</td><td>unix timestamp</td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="Response" %}
+<pre><code><strong>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZGRyZXNzIjoiMHgzNDk4ZjQ1NjY0NTI3MGVlMDAzNDQxZGY4MmM3MThiNTZjMGU2NjY2IiwiZXhwaXJlZEF0IjoxNjU0MDU1MDMzLCJpZCI6NDksInB1YmtleSI6IjBkZDRmNjAzNTMxYmQ3OGJiZWNkMDA1ZDllN2NjNjJhNzk0ZGNmYWRjZWZmZTAzZTI2OWZiYjZiNzJlOWM3MjQifQ.2S1wt6KxfJU8kxvESbrdUW1jxYyqxXlcIhL9DwtW3Yc
+</strong></code></pre>
+{% endtab %}
+{% endtabs %}
 
 ***
 
 ### Get Market Maker's user info
 
+{% tabs %}
+{% tab title="Request" %}
 * HTTP Method: `GET`
 * HTTP Path: `/mm/api/self` (HMAC SHA256)
 * HTTP Header: `X-MBX-APIKEY` : `api key`
-*   Parameters:
 
-    <table><thead><tr><th width="158.21167883211677">Name</th><th width="80">Type</th><th width="123">Required</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1653983486</td><td>unix timestamp</td></tr></tbody></table>
-*   Response :
+**Parameters:**
 
-    ```
-    {
-        "id": 39,
-        "address": "0x9f44be256f9b0797dc26bfeed70e57a4ac4258c6",
-        "initHeight": 0,     
-        "l2active": 1,            // 0: actived in layer2   1：not actived in layer2 
-        "l2userId": 67,           // layer2 account id
-        "userLevel": "v1",        // fee level
-        "verifyType": 0,          // 0: common mode   1: unipass mode
-        "chainId": 0              // layer2 chain id (only used in unipass mode)
-    }
-    ```
+<table><thead><tr><th width="158.21167883211677">Name</th><th width="80">Type</th><th width="123">Required</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1653983486</td><td>unix timestamp</td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="Response" %}
+```
+{
+    "id": 39,
+    "address": "0x9f44be256f9b0797dc26bfeed70e57a4ac4258c6",
+    "initHeight": 0,     
+    "l2active": 1,            // 0: actived in layer2   1：not actived in layer2 
+    "l2userId": 67,           // layer2 account id
+    "userLevel": "v1",        // fee level
+    "verifyType": 0,          // 0: common mode   1: unipass mode
+    "chainId": 0              // layer2 chain id (only used in unipass mode)
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ***
 
 ### Apply Order Slots Batchly
 
+{% tabs %}
+{% tab title="Request" %}
 * HTTP Method: `GET`
 * HTTP Path: `/mm/api/slot` (HMAC SHA256)
 * HTTP Header: `X-MBX-APIKEY` : `api key`
-*   Parameters:
 
-    <table><thead><tr><th width="153.21167883211677">Name</th><th width="93">Type</th><th width="117">Required</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1653983486</td><td>unix timestamp</td></tr><tr><td>count</td><td>int</td><td>YES</td><td>1</td><td></td></tr></tbody></table>
-*   Response :
+**Parameters:**
 
-    ```
-    [
-      {
-        "slot":  10,             
-        "nonce": 100
-      }
-    ]
-    ```
+<table><thead><tr><th width="141.21167883211677">Name</th><th width="93">Type</th><th width="117">Required</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1653983486</td><td>unix timestamp</td></tr><tr><td>count</td><td>int</td><td>YES</td><td>1</td><td></td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="Response" %}
+```
+[
+  {
+    "slot":  10,             
+    "nonce": 100
+  }
+]
+```
+{% endtab %}
+{% endtabs %}
 
 ***
 
@@ -145,264 +198,417 @@ Send in a new order.
 
 ### Cancel Order
 
-* Cancel an active order
+{% tabs %}
+{% tab title="Request" %}
+Cancel an active order
+
 * HTTP Method: `DELETE`
 * HTTP Path: `/mm/api/order` (HMAC SHA256)
 * HTTP Header: `X-MBX-APIKEY` : `api key`
-*   Parameters
 
-    <table><thead><tr><th width="130.21167883211677">Name</th><th width="97">Type</th><th width="116">Required</th><th width="148">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr><tr><td>orderId</td><td>int</td><td>YES</td><td>755</td><td></td></tr></tbody></table>
-* Response: none
+**Parameters**
+
+<table><thead><tr><th width="130.21167883211677">Name</th><th width="97">Type</th><th width="116">Required</th><th width="148">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr><tr><td>orderId</td><td>int</td><td>YES</td><td>755</td><td></td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="Response" %}
+none
+{% endtab %}
+{% endtabs %}
 
 ***
 
 ### Cancel all Open Orders on a Symbol
 
+{% tabs %}
+{% tab title="Request" %}
 * HTTP Meth: `DELETE`
 * HTTP PATH: `/mm/api/orders` (HMAC SHA256)
 * HTTP HEADER: `X-MBX-APIKEY` : `api key`
-*   Parameters:
 
-    <table><thead><tr><th width="150.21167883211677">Name</th><th width="105">Type</th><th width="114">Required</th><th width="144">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr></tbody></table>
-* Response : none
+**Parameters:**
+
+<table><thead><tr><th width="150.21167883211677">Name</th><th width="105">Type</th><th width="114">Required</th><th width="144">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="Response" %}
+none
+{% endtab %}
+{% endtabs %}
 
 ***
 
 ### Get all orders
 
-* Get all orders, includes `new`, `open`, `filled`, `cancelled`, `cancelling`, `partial`
+{% tabs %}
+{% tab title="Request" %}
+Get all orders, includes `new`, `open`, `filled`, `cancelled`, `cancelling`, `partial`
+
 * HTTP Method: `GET`
 * HTTP PATH: `/mm/api/orders` (HMAC SHA256)
 * HTTP HEADER: `X-MBX-APIKEY` : `api key`
-*   Parameters:
 
-    <table><thead><tr><th width="137">Name</th><th width="87">Type</th><th width="102">Required</th><th width="139">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr><tr><td>status</td><td>string</td><td>NO</td><td>filled filled,partial</td><td>The order status (support combined status)</td></tr><tr><td>startTime</td><td>long</td><td>YES</td><td>1</td><td></td></tr><tr><td>endTime</td><td>long</td><td>YES</td><td>1654063467</td><td></td></tr><tr><td>limit</td><td>int</td><td>YES</td><td>20</td><td></td></tr></tbody></table>
-*   Response:
+**Parameters:**
 
-    ```
-    {
-      "total": 1000,
-      "orders": [{
-        "id": "1666371045063401472",          # order id
-        "userId": "28",      # user id
-        "price": "9000000000000000",         
-        "size": "2500000000",           
-        "funds": "19997",                # price*size/pow(10,18)
-        "productId": "UNI-USDT",
-        "side": "sell",               # buy or sell
-        "type": "limit",                
-        "createdAt": 1650958799,
-        "fillFees": "0",              
-        "filledSize": "200000000",                 # The actual transaction quantity of the order
-        "executedValue": "1800000",              # The actual transaction value of the order
-        "status": "open",                   #order status   `new`, `open`,  `filled`, `cancelled`, `cancelling`, `partial`
-        "l2Status": "none",                 #order layer2 status   `none`: init status          `confirming`:The order is fully filled, but not confirmed by layer2      `filled`:The order is fully filled, and confirmed by layer2      `cancelled`:The order has been cancelled, and cancelled in layer2          `partial`:The order is partial filled, and confirmed by layer2
-        "preSettled": false,
-        "settled": false,
-        "chanFrom": 0,             #     0 : user order       1 : market maker order
-        "trades": [{
-         "id": 1,
-         "time": 1650958799,
-         "tradeSeq": 231628,
-         "price": "9000000000000000",
-         "takerOrderId": "1666371045063401472",
-         "makerOrderId": "1666371045063401471",
-         "size": "100000",
-         "side": "buy",
-         "status": 3,    # 0:not sent to layer2      1:sent to layer2      2:layer2 success    3:layer2 fail      9:matching fail(not sent to layer2)
-         "productId": "UNI-USDT",
-         "funds": "900",
-         "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
-         "failReason": ""
-        }, {
-         "id": 2,
-         "time": 1650958799,
-         "tradeSeq": 231627,
-         "price": "9000000000000000",
-         "takerOrderId": "1666371045063401473",
-         "makerOrderId": "1666371045063401474", 
-         "size": "100000",
-         "side": "buy",
-         "status": 3,
-         "productId": "UNI-USDT",
-         "funds": "900",
-         "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
-         "failReason": ""
-        }],
-        "cancelFill": {
-         "id": 1,
-         "time": 1650958799,
-         "size": "199800000",
-         "doneReason": "cancelled"
-        }
-        "isFullFill": true,   # If isFullFill is true, it means that the order has actually been filled completely. But `trade.status` may not be `filled` , but it will eventually become filled.
-       }, {
-        "id": "1666371045063401471",
-        "userId": "28",      # user id
-        "price": "8000000000000000",
-        "size": "2500000000",
-        "funds": "0",
-        "productId": "BTC-USDT",
-        "side": "buy",
-        "type": "limit",
-        "createdAt": 1650958799,
-        "fillFees": "0",
-        "filledSize": "0",
-        "executedValue": "0",
-        "status": "cancelled",
-        "l2Status": "none",
-        "preSettled": false,
-        "settled": false,
-        "trades": [{
-         "id": 1,
-         "time": 1650958799,
-         "tradeSeq": 231628,
-         "price": "8000000000000000",
-         "takerOrderId": "1666371045063401471",
-         "makerOrderId": "1666371045063401472",
-         "size": "100000",
-         "side": "buy",
-         "status": 3,
-         "productId": "UNI-USDT",
-         "funds": "900",
-         "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
-         "failReason": ""
-        }, {
-         "id": 2,
-         "time": 1650958799,
-         "tradeSeq": 231627,
-         "price": "8000000000000000",
-         "takerOrderId": "1666371045063401473",
-         "makerOrderId": "1666371045063401474",
-         "size": "100000",
-         "side": "buy",
-         "status": 3,
-         "productId": "UNI-USDT",
-         "funds": "900",
-         "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
-         "failReason": ""
-        }]
-        "cancelFill": {
-         "id": 1,
-         "time": 1650958799,
-         "size": "199800000",
-         "doneReason": "cancelled"
-       },
-       "isFullFill": true   
-      }]
-     }    
-    ```
+<table><thead><tr><th width="137">Name</th><th width="87">Type</th><th width="102">Required</th><th width="139">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr><tr><td>status</td><td>string</td><td>NO</td><td>filled filled,partial</td><td>The order status (support combined status)</td></tr><tr><td>startTime</td><td>long</td><td>YES</td><td>1</td><td></td></tr><tr><td>endTime</td><td>long</td><td>YES</td><td>1654063467</td><td></td></tr><tr><td>limit</td><td>int</td><td>YES</td><td>20</td><td></td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="Response" %}
+```
+{
+  "total": 1000,
+  "orders": [{
+    "id": "1666371045063401472",          # order id
+    "userId": "28",      # user id
+    "price": "9000000000000000",         
+    "size": "2500000000",           
+    "funds": "19997",                # price*size/pow(10,18)
+    "productId": "UNI-USDT",
+    "side": "sell",               # buy or sell
+    "type": "limit",                
+    "createdAt": 1650958799,
+    "fillFees": "0",              
+    "filledSize": "200000000",                 # The actual transaction quantity of the order
+    "executedValue": "1800000",              # The actual transaction value of the order
+    "status": "open",                   #order status   `new`, `open`,  `filled`, `cancelled`, `cancelling`, `partial`
+    "l2Status": "none",                 #order layer2 status   `none`: init status          `confirming`:The order is fully filled, but not confirmed by layer2      `filled`:The order is fully filled, and confirmed by layer2      `cancelled`:The order has been cancelled, and cancelled in layer2          `partial`:The order is partial filled, and confirmed by layer2
+    "preSettled": false,
+    "settled": false,
+    "chanFrom": 0,             #     0 : user order       1 : market maker order
+    "trades": [{
+     "id": 1,
+     "time": 1650958799,
+     "tradeSeq": 231628,
+     "price": "9000000000000000",
+     "takerOrderId": "1666371045063401472",
+     "makerOrderId": "1666371045063401471",
+     "size": "100000",
+     "side": "buy",
+     "status": 3,    # 0:not sent to layer2      1:sent to layer2      2:layer2 success    3:layer2 fail      9:matching fail(not sent to layer2)
+     "productId": "UNI-USDT",
+     "funds": "900",
+     "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
+     "failReason": ""
+    }, {
+     "id": 2,
+     "time": 1650958799,
+     "tradeSeq": 231627,
+     "price": "9000000000000000",
+     "takerOrderId": "1666371045063401473",
+     "makerOrderId": "1666371045063401474", 
+     "size": "100000",
+     "side": "buy",
+     "status": 3,
+     "productId": "UNI-USDT",
+     "funds": "900",
+     "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
+     "failReason": ""
+    }],
+    "cancelFill": {
+     "id": 1,
+     "time": 1650958799,
+     "size": "199800000",
+     "doneReason": "cancelled"
+    }
+    "isFullFill": true,   # If isFullFill is true, it means that the order has actually been filled completely. But `trade.status` may not be `filled` , but it will eventually become filled.
+   }, {
+    "id": "1666371045063401471",
+    "userId": "28",      # user id
+    "price": "8000000000000000",
+    "size": "2500000000",
+    "funds": "0",
+    "productId": "BTC-USDT",
+    "side": "buy",
+    "type": "limit",
+    "createdAt": 1650958799,
+    "fillFees": "0",
+    "filledSize": "0",
+    "executedValue": "0",
+    "status": "cancelled",
+    "l2Status": "none",
+    "preSettled": false,
+    "settled": false,
+    "trades": [{
+     "id": 1,
+     "time": 1650958799,
+     "tradeSeq": 231628,
+     "price": "8000000000000000",
+     "takerOrderId": "1666371045063401471",
+     "makerOrderId": "1666371045063401472",
+     "size": "100000",
+     "side": "buy",
+     "status": 3,
+     "productId": "UNI-USDT",
+     "funds": "900",
+     "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
+     "failReason": ""
+    }, {
+     "id": 2,
+     "time": 1650958799,
+     "tradeSeq": 231627,
+     "price": "8000000000000000",
+     "takerOrderId": "1666371045063401473",
+     "makerOrderId": "1666371045063401474",
+     "size": "100000",
+     "side": "buy",
+     "status": 3,
+     "productId": "UNI-USDT",
+     "funds": "900",
+     "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
+     "failReason": ""
+    }]
+    "cancelFill": {
+     "id": 1,
+     "time": 1650958799,
+     "size": "199800000",
+     "doneReason": "cancelled"
+   },
+   "isFullFill": true   
+  }]
+ }    
+```
+{% endtab %}
+{% endtabs %}
 
 ***
 
 ### Query Order
 
-* Check an order's status.
+{% tabs %}
+{% tab title="Request" %}
+Check an order's status.
+
 * HTTP Method: `GET`
 * HTTP PATH: `/mm/api/order` (HMAC SHA256)
 * HTTP Header: `X-MBX-APIKEY` : `api key`
-*   Parameters:
 
-    <table><thead><tr><th width="143">Name</th><th width="95">Type</th><th width="112">Required</th><th width="147">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr><tr><td>orderId</td><td>int</td><td>YES</td><td>755</td><td></td></tr></tbody></table>
-*   Response：
+**Parameters:**
 
-    ```
-    {
-        "id": "1666371045063401472",    
-        "userId": "28",
-        "price": "9000000000000000",            
-        "size": "2500000000",                
-        "funds": "19997",              
-        "productId": "UNI-USDT",
-        "side": "sell",             
-        "type": "limit",                      
-        "createdAt": 1650958799,
-        "fillFees": "0",                 
-        "filledSize": "200000000",                
-        "executedValue": "1800000",             
-        "status": "open",  
-        "l2Status": "none",
-        "preSettled": false,
-        "settled": false,
-        "chanFrom": 0,              
-        "trades": [{
-         "id": 1,
-         "time": 1650958799,
-         "tradeSeq": 231628,
-         "price": "9000000000000000",
-         "takerOrderId": "1666371045063401473",
-         "makerOrderId": "1666371045063401474",
-         "size": "100000",
-         "side": "buy",
-         "status": 3,
-         "productId": "UNI-USDT",
-         "funds": "900",
-         "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
-         "failReason": ""  
-        }, {
-         "id": 2,
-         "time": 1650958799,
-         "tradeSeq": 231627,
-         "price": "9000000000000000",
-         "takerOrderId": "1666371045063401472",
-         "makerOrderId": "1666371045063401471", 
-         "size": "100000",
-         "side": "buy",
-         "status": 3,
-         "productId": "UNI-USDT",
-         "funds": "900",
-         "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
-         "failReason": ""
-        }],
-        "cancelFill": {
-         "id": 1,
-         "time": 1650958799,
-         "size": "199800000",
-         "doneReason": "cancelled"
-        },
-        "isFullFill": true 
-    }
-    ```
+<table><thead><tr><th width="143">Name</th><th width="95">Type</th><th width="112">Required</th><th width="147">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr><tr><td>orderId</td><td>int</td><td>YES</td><td>755</td><td></td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="Response" %}
+<pre><code><strong>{
+</strong>    "id": "1666371045063401472",    
+    "userId": "28",
+    "price": "9000000000000000",            
+    "size": "2500000000",                
+    "funds": "19997",              
+    "productId": "UNI-USDT",
+    "side": "sell",             
+    "type": "limit",                      
+    "createdAt": 1650958799,
+    "fillFees": "0",                 
+    "filledSize": "200000000",                
+    "executedValue": "1800000",             
+    "status": "open",  
+    "l2Status": "none",
+    "preSettled": false,
+    "settled": false,
+    "chanFrom": 0,              
+    "trades": [{
+     "id": 1,
+     "time": 1650958799,
+     "tradeSeq": 231628,
+     "price": "9000000000000000",
+     "takerOrderId": "1666371045063401473",
+     "makerOrderId": "1666371045063401474",
+     "size": "100000",
+     "side": "buy",
+     "status": 3,
+     "productId": "UNI-USDT",
+     "funds": "900",
+     "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
+     "failReason": ""  
+    }, {
+     "id": 2,
+     "time": 1650958799,
+     "tradeSeq": 231627,
+     "price": "9000000000000000",
+     "takerOrderId": "1666371045063401472",
+     "makerOrderId": "1666371045063401471", 
+     "size": "100000",
+     "side": "buy",
+     "status": 3,
+     "productId": "UNI-USDT",
+     "funds": "900",
+     "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
+     "failReason": ""
+    }],
+    "cancelFill": {
+     "id": 1,
+     "time": 1650958799,
+     "size": "199800000",
+     "doneReason": "cancelled"
+    },
+    "isFullFill": true 
+}
+</code></pre>
+{% endtab %}
+{% endtabs %}
 
 ***
 
 ### Get all open orders
 
+{% tabs %}
+{% tab title="Request" %}
 * HTTP Method: `GET`
 * HTTP Path: `/mm/api/openOrders` (HMAC SHA256)
 * HTTP Header: `X-MBX-APIKEY` : `api key`
-*   Parameters:
 
-    <table><thead><tr><th width="143">Name</th><th width="95">Type</th><th width="112">Required</th><th width="147">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr><tr><td>limit</td><td>int</td><td>YES</td><td>20</td><td></td></tr></tbody></table>
-* Response : [same as Get all orders Response](https://github.com/ZKEX/dev-docs/tree/main/market-maker-apis#mmgetorders)
+**Parameters:**
+
+<table><thead><tr><th width="143">Name</th><th width="95">Type</th><th width="112">Required</th><th width="147">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr><tr><td>symbol</td><td>string</td><td>YES</td><td>UNI-USDC</td><td>The trading pair name</td></tr><tr><td>limit</td><td>int</td><td>YES</td><td>20</td><td></td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="Response" %}
+```
+{
+  "total": 1000,
+  "orders": [{
+    "id": "1666371045063401472",          # order id
+    "userId": "28",      # user id
+    "price": "9000000000000000",         
+    "size": "2500000000",           
+    "funds": "19997",                # price*size/pow(10,18)
+    "productId": "UNI-USDT",
+    "side": "sell",               # buy or sell
+    "type": "limit",                
+    "createdAt": 1650958799,
+    "fillFees": "0",              
+    "filledSize": "200000000",                 # The actual transaction quantity of the order
+    "executedValue": "1800000",              # The actual transaction value of the order
+    "status": "open",                   #order status   `new`, `open`,  `filled`, `cancelled`, `cancelling`, `partial`
+    "l2Status": "none",                 #order layer2 status   `none`: init status          `confirming`:The order is fully filled, but not confirmed by layer2      `filled`:The order is fully filled, and confirmed by layer2      `cancelled`:The order has been cancelled, and cancelled in layer2          `partial`:The order is partial filled, and confirmed by layer2
+    "preSettled": false,
+    "settled": false,
+    "chanFrom": 0,             #     0 : user order       1 : market maker order
+    "trades": [{
+     "id": 1,
+     "time": 1650958799,
+     "tradeSeq": 231628,
+     "price": "9000000000000000",
+     "takerOrderId": "1666371045063401472",
+     "makerOrderId": "1666371045063401471",
+     "size": "100000",
+     "side": "buy",
+     "status": 3,    # 0:not sent to layer2      1:sent to layer2      2:layer2 success    3:layer2 fail      9:matching fail(not sent to layer2)
+     "productId": "UNI-USDT",
+     "funds": "900",
+     "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
+     "failReason": ""
+    }, {
+     "id": 2,
+     "time": 1650958799,
+     "tradeSeq": 231627,
+     "price": "9000000000000000",
+     "takerOrderId": "1666371045063401473",
+     "makerOrderId": "1666371045063401474", 
+     "size": "100000",
+     "side": "buy",
+     "status": 3,
+     "productId": "UNI-USDT",
+     "funds": "900",
+     "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
+     "failReason": ""
+    }],
+    "cancelFill": {
+     "id": 1,
+     "time": 1650958799,
+     "size": "199800000",
+     "doneReason": "cancelled"
+    }
+    "isFullFill": true,   # If isFullFill is true, it means that the order has actually been filled completely. But `trade.status` may not be `filled` , but it will eventually become filled.
+   }, {
+    "id": "1666371045063401471",
+    "userId": "28",      # user id
+    "price": "8000000000000000",
+    "size": "2500000000",
+    "funds": "0",
+    "productId": "BTC-USDT",
+    "side": "buy",
+    "type": "limit",
+    "createdAt": 1650958799,
+    "fillFees": "0",
+    "filledSize": "0",
+    "executedValue": "0",
+    "status": "cancelled",
+    "l2Status": "none",
+    "preSettled": false,
+    "settled": false,
+    "trades": [{
+     "id": 1,
+     "time": 1650958799,
+     "tradeSeq": 231628,
+     "price": "8000000000000000",
+     "takerOrderId": "1666371045063401471",
+     "makerOrderId": "1666371045063401472",
+     "size": "100000",
+     "side": "buy",
+     "status": 3,
+     "productId": "UNI-USDT",
+     "funds": "900",
+     "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
+     "failReason": ""
+    }, {
+     "id": 2,
+     "time": 1650958799,
+     "tradeSeq": 231627,
+     "price": "8000000000000000",
+     "takerOrderId": "1666371045063401473",
+     "makerOrderId": "1666371045063401474",
+     "size": "100000",
+     "side": "buy",
+     "status": 3,
+     "productId": "UNI-USDT",
+     "funds": "900",
+     "txHash": "0x40acae664609d1115f5ab32d9f3c0fedd7609daa6a4a5515333f583fba10f545",
+     "failReason": ""
+    }]
+    "cancelFill": {
+     "id": 1,
+     "time": 1650958799,
+     "size": "199800000",
+     "doneReason": "cancelled"
+   },
+   "isFullFill": true   
+  }]
+ }    
+```
+{% endtab %}
+{% endtabs %}
 
 ***
 
 ### Account Info
 
+{% tabs %}
+{% tab title="Request" %}
 * HTTP Method: `GET`
 * HTTP Path: `/mm/api/accounts`
 * HTTP HEADER: `X-MBX-APIKEY` : `api key`
-*   Parameters:
 
-    <table><thead><tr><th width="143">Name</th><th width="95">Type</th><th width="112">Required</th><th width="147">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr></tbody></table>
-*   Response:
+**Parameters:**
 
-    ```
-    [
-      {
-       "id": "1",
-       "currency": "USDC",
-       "available": "952011220000",
-       "hold": "1030410000000"
-      }, {
-       "id": "2",
-       "currency": "USDT",
-       "available": "4444030410000000",
-       "hold": "766652011220000"
-      }
-    ]
-    ```
+<table><thead><tr><th width="143">Name</th><th width="95">Type</th><th width="112">Required</th><th width="147">Example</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>long</td><td>YES</td><td>1654060757</td><td>unix timestamp</td></tr></tbody></table>
+{% endtab %}
 
-
-
+{% tab title="Response" %}
+```
+[
+  {
+   "id": "1",
+   "currency": "USDC",
+   "available": "952011220000",
+   "hold": "1030410000000"
+  }, {
+   "id": "2",
+   "currency": "USDT",
+   "available": "4444030410000000",
+   "hold": "766652011220000"
+  }
+]
+```
+{% endtab %}
+{% endtabs %}
