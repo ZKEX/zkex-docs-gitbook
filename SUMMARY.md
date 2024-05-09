@@ -5,7 +5,7 @@
 * [❓ What is ZKEX?](README.md)
 * [🌐 How ZKEX works](overview/our-features.md)
 * [✨ Supported chains and coins](overview/supported-chains-and-coins.md)
-* [👝 L2 ZKEX Wallet](overview/copy-of-fee.md)
+* [🎟️ ZKEX Account](overview/zkex-account.md)
 * [📈 Trading](overview/trading.md)
 * [💰 Fees](<README (1).md>)
 * [🔐 Security](overview/security.md)
