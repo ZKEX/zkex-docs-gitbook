@@ -17,7 +17,7 @@ Official channels:
 * Website: [https://zkex.com](https://zkex.com/)
 * Twitter/X: [https://twitter.com/ZKEX\_Official](https://twitter.com/ZKEX\_Official)
 * Telegram: [https://t.me/ZKEX\_Official](https://t.me/ZKEX\_Official)
-* Discord: [https://discord.com/invite/zkex](https://discord.com/invite/zkex)
+* Discord: [https://discord.com/invite/ctDAYrrNTH](https://discord.com/invite/ctDAYrrNTH)
 * Blog: [https://zkex.medium.com](https://zkex.medium.com/)
 * Newsletter: [https://zkex.substack.com](https://zkex.substack.com)
 
@@ -59,11 +59,11 @@ Learning a few basic technical terms will help you understand crypto and web3 a 
 >
 > There are many types of L2 networks, with zero-knowledge rollups considered to be one of the most promising for enhanced scalability, privacy, and security.
 
-> **L3 Networks**
+> #### L3 Networks
 >
 > A Layer3 (L3) network is a third blockchain layer built on top of one of more L2 networks. The primary goal of an L3 network is to provide additional specialization and efficiency for specific use cases  or to enable new functionalities that are not feasible directly on L2 due to constraints like standardization, privacy requirements, or interoperability issues.
 
-> #### Zero-knowledge Rollups
+> #### Zero-Knowledge Rollups
 >
 > A zero-knowledge rollup (ZK-rollup) is a way of using mathematics to verify the outcome of a transaction, and compress transaction data down to a minimum. A proof is generated, which is double-checked for judgement, after which the trade is confirmed as being successful, and written to the underlying L1 blockchain.
 >

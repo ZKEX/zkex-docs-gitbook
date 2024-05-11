@@ -23,7 +23,3 @@
 * [💫 Getting Started](apis/making-a-post/getting-started.md)
 * [🤍 Websocket Subscribe & Unsubscribe](zkex2.0-market-maker-apis/websocket-subscribe-and-unsubscribe.md)
 * [📌 Websocket Data Push](zkex2.0-market-maker-apis/websocket-data-push.md)
-
-## Product Guides
-
-*

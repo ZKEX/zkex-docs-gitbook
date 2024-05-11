@@ -13,7 +13,7 @@ We've successfully integrated the following blockchain networks, with more comin
 > * Polygon
 > * Linea
 > * StarkNet&#x20;
-> * Era zkSync
+> * zkSync Era
 > * Arbitrum
 > * Optimism
 > * Base
@@ -28,6 +28,5 @@ Users can deposit any of the following fiat-backed stablecoins, which are merged
 
 * USDC
 * USDT
-* DAI
 
 Since all deposited stablecoins are equivalent to USD, the number of trading pairs is minimized, making it simpler to trade.
