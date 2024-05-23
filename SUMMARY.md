@@ -11,6 +11,7 @@
 * [🔐 Security](overview/security.md)
 * [🪙 Tokenomics](overview/tokenomics.md)
 * [📔 Resources](overview/resources.md)
+* [🛣️ Roadmap](overview/roadmap.md)
 
 ## &#x20;NETWORK INFORMATION
 
